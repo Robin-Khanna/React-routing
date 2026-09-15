@@ -1,7 +1,7 @@
-import {  Link } from 'react-router-dom'
-import RouteComponent from './route/RouteComponent'
+import {  Link, Route, Routes } from 'react-router-dom'
 
 import './App.css'
+import Home from './pages/home/Home'
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
       <Link to='/product'>Product</Link>
     </nav>
 
-    <RouteComponent/>
-
+    <Routes>
+        <Route path='/' element={<Home/>} />
+    </Routes>
     </>
   )
 }
